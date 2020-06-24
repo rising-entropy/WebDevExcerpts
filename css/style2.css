@@ -1,0 +1,139 @@
+body{
+    background-color: #f4ebc1;
+    margin: 0;
+}
+
+.headline{
+    
+    text-align: center;
+    font-family: 'Rokkitt', serif;
+    font-size: 190%;
+    color: #07031a;
+}
+
+.top-cloud{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    left: 180px;
+
+}
+
+.bottom-cloud{
+    position: relative;
+    left: 510px;
+}
+
+.mountain{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position: relative;
+  left: 80px;
+}
+
+.middle-container{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 140%;
+    color: #709fb0;
+
+}
+
+.bottom-container{
+    background-color: #ea907a;
+    text-align: center;
+    margin: 20px auto;
+    color: #07031a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none brown;
+}
+
+.propic{
+    max-width: 15%;
+    max-height: 15%;
+    margin: 0 auto;
+    align-content: center;
+    position: relative;
+    right: 10px;
+}
+
+.greet{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 250%;
+    color: #726a95;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.namee{
+    font-family: 'Sacramento', cursive;
+    font-size: 80px;
+    margin: 10px auto 0 auto;
+}
+
+.hr{
+    border: 10px solid #01a9b4;
+}
+
+.greet2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 200%;
+    color: #4f8a8b;
+    width: auto;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    padding-top: 10px;
+}
+
+.skil1{
+    max-width: 8%;
+    max-height: 8%;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    left: 400px;
+}
+
+.skil2{
+    max-width: 8%;
+    max-height: 8%;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    right: 790px;
+}
+
+.skill-row{
+    padding: 10px auto;
+    margin: 10px auto;
+    text-align: left;
+    position: relative;
+    left: 410px;
+}
+
+.bigt{
+    color: #190e4e;
+    margin: 0 auto;
+}
+
+.skill-row2{
+    padding: 10px auto;
+    margin: 10px auto;
+    text-align: left;
+    position: relative;
+    left: 410px;
+}
+
+.btn{
+    padding: 10px;
+    background-color: #D92027;
+    color: #190e4e;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}

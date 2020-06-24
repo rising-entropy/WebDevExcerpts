@@ -1,0 +1,34 @@
+body{
+    background-color: #381460;
+    margin: 0;
+}
+.top{
+   width: 200px;
+    height: 200px;
+    background-color: tomato;
+    border: solid 10px;
+    border-color: black;
+    display: inline-block;
+    position: relative;
+    left: 450px;
+}
+.mid{
+    width: 200px;
+    height: 200px;
+    background-color: #47ffd1;
+    border: solid 10px;
+    border-color: black;
+    display: inline-block;
+    position: relative;
+    right: 220px;
+}
+.bottom{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: solid 10px;
+    border-color: black;
+    display: inline-block;
+    position: relative;
+    right: 220px;
+}

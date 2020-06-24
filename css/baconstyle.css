@@ -1,0 +1,21 @@
+body{
+    background-color: #ddf3f5;
+}
+h1{
+    color: #e36387;
+}
+p{
+    font-style: oblique;
+    color: #f2aaaa;
+}
+p:hover{
+    background-color: salmon;
+    width: 300px;
+}
+img{
+    background-color: #9bdeac;
+}
+img:hover
+{
+    background-color: purple;
+}
