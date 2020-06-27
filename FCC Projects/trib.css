@@ -1,0 +1,45 @@
+#tribute-info{
+    font-size: 120%;
+    font-family: 'Roboto Slab', serif;
+    color: #363636;
+    margin: 0 auto;
+  }
+  
+  h3{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+  img{
+    margin: 0 auto;
+    text-align: center;
+    display:block;
+    max-width: 100%;
+  }
+  
+  .main-title{
+    background-color: #fff0f5;
+    color: #c70039;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  #title{
+    font-family: 'Satisfy', cursive;
+    color: #ea6227
+  }
+  
+  #img-caption{
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  #tribute-link{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: right;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+  }
+  
+  
+  

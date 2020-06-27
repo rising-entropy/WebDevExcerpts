@@ -1,0 +1,122 @@
+hr{
+    width: 40%;
+  }
+  
+  .main{
+    background-color: #fcf8f3;  
+  }
+  
+  li{
+    list-style: none;
+    font-size: 120%;
+    padding-top: 5%;
+    font-family: 'Karla', sans-serif;
+  }
+  a{
+    text-decoration: none;
+      color: #1f4068;
+    font-size: 120%;
+    display: flex;
+    align-content: right;
+  }
+  #header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color: #aeefec;
+    width: 100%;
+  }
+  #header-img{
+    width: 10%;
+    display: inline-block;
+  }
+  #brand{
+    display:inline-block;
+    font-family: 'Pangolin', cursive;
+    font-size: 300%;
+    margin: auto 2px auto 2px;
+  }
+  
+  nav > ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  #video{
+    width: 400px;
+    height: 320px;
+    border-radius: 20px;
+    margin: 10px auto;
+    display:flex;
+  }
+  
+  .headline{
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 130%;
+    color: #481380;
+  }
+  
+  #form{
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #email{
+    width: 20%;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  #submit{
+     margin: 40px auto;
+     padding: 15px 30px;
+    border-radius: 20px;
+    background-color: #ff9d9d;
+    color: #192965;
+    font-family: 'Karla', sans-serif;
+    font-size: 120%;
+  }
+  
+  .feat{
+    text-align: center;
+    font-family: 'Mali', cursive;
+  }
+  
+  #features{
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2px;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  
+  #shows{
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2px;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #1b262c;
+  }
+  
+  #pricing{
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2px;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #1b262c;
+  }
+  
+  .endd{
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+    color: #9d2503;
+  }

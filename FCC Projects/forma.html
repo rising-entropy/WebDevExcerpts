@@ -1,0 +1,51 @@
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Lato&family=Libre+Franklin:wght@200&family=Roboto+Slab&family=Satisfy&display=swap" rel="stylesheet">
+<div class="main-win">
+  <div class="forma">
+    <h1 id="title">rising-entropy Survey Form</h1>
+    <p id="description">Feedback on the UI and Accessibility.</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name: </label>
+      <input type="text" name="name" id="name" placeholder="Enter your Name" required></input>
+    <br><br>
+    <label for="email" id="email-label">E-mail: </label>
+    <input type="email" name="email" id="email" placeholder="Enter your E-mail" required></input>
+  <br><br>
+  <label for="age" id="number-label">Age: </label>
+  <input type="number" name="age" id="number" placeholder="Age" min="10" max="100"></input>
+<br><br>
+<label for="titleg">What Title would you give Yourself: 
+  <select id="dropdown" name="dropdown" placeholder="Title">
+    <option value="Student">Student</option>
+    <option value="Graduate">Graduate</option>
+    <option value="Working">Working</option>
+    <option value="Looking-For-Job">Looking for Job</option>
+    <option value="Retired">Retired</option>
+    <option value="Other">Other</option>
+  </select>
+  <br><br>
+  <div class="rad"><label for="recommend">How Likely are you to Recommend the site:</label><br>
+  <input name="recomm" type="radio" value="verylike">Very Likely</input><br>
+<input name="recomm" type="radio" value="Like">Likely</input>
+<br>
+<input name="recomm" type="radio" value="Unlike">Unlikely</input>
+<br>
+<input name="recomm" type="radio" value="VeryUnLike">Very Unlikely</input></div>
+<br><br>
+<label for="skills">Select the Skills you are Aware of: </label>
+<br>
+<input type="checkbox" value="HTML">HTML</input><br>
+<input type="checkbox" value="CSS">CSS</input><br>
+<input type="checkbox" value="Javascript">Javascript</input><br>
+<input type="checkbox" value="Mongo">Mongo</input><br>
+<input type="checkbox" value="Express">Express</input><br>
+<input type="checkbox" value="React">React</input><br>
+<input type="checkbox" value="Node">Node</input>
+<br><br>
+<label for="comments">Additional Comments: </label>
+<br>
+<textarea placeholder="Enter Additional Comments" columns="100" rows="4"></textarea>
+<br><br>
+<button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
