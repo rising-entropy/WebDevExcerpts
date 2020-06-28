@@ -1,0 +1,78 @@
+#title{
+    background-color: #ff4c68;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    color: #f4f6ff;
+    line-height: 1.5;
+    font-size: 3rem;
+    text-emphasis: none;
+    padding-bottom: 10px;
+}
+
+.container-fluid{
+    padding: 5% 15%;
+}
+
+#iphone{
+    transform: rotate(30deg);
+    padding-top: 10px;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-style: none;
+}
+
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 250%;
+    margin-left: 10rem;
+}
+
+nav{
+    padding-bottom: 8px;
+    background-color: #ff4c68;
+}
+
+.nav-item{
+    padding: 0 20px;
+}
+
+.downbtn{
+    margin-top: 30px;
+    margin-right: 25px;
+    padding-right: 20px;
+}
+
+.feat{
+    text-align: center;
+}
+
+.featoo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.icoo{
+    color: #ef8172;
+    padding-bottom: 20px;
+}
+
+.icoo:hover{
+    color: #ff4c68;
+    padding-bottom: 20px;
+}
+
+#features{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.det{
+    color: #8f8f8f
+}
