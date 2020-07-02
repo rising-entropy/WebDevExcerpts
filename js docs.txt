@@ -1,0 +1,92 @@
+var names=["Manish", "Devang", "Sanjay", "Lalu", "Deepak", "Ruthik", "Karan"];
+var name = prompt("Enter you Name:");
+if(names.includes(name))
+alert("Welcome "+name);
+else
+alert("Nikal Lavde");
+
+
+
+
+
+
+var a = [];
+var i=Number(1);
+function add_num()
+{
+    if(i%5===0 && i%3===0)
+    a.push("FizzBuzz");
+    else if(i%3===0)
+    a.push("Fizz");
+    else if(i%5===0)
+    a.push("Buzz");
+    else
+    a.push(i);
+    i++;
+    console.log(a);
+}
+add_num();
+add_num();
+
+
+
+
+
+
+
+
+
+
+
+
+// 99 bottles of beer on the wall, 99 bottles of beer.
+// Take one down and pass it around, 98 bottles of beer on the wall.
+
+// 2 bottles of beer on the wall, 2 bottles of beer.
+// Take one down and pass it around, 1 bottle of beer on the wall.
+
+// 1 bottle of beer on the wall, 1 bottle of beer.
+// Take one down and pass it around, no more bottles of beer on the wall.
+
+// No more bottles of beer on the wall, no more bottles of beer.
+// Go to the store and buy some more, 99 bottles of beer on the wall.
+
+
+
+function bottles(){
+    var bottle=99;
+    while(bottle>=3)
+    {
+        console.log(bottle+" bottles of beer on the wall, "+bottle+" bottles of beer.");
+        bottle--;
+        console.log("Take one down and pass it around, "+bottle+" bottles of beer on the wall.")
+    }
+    console.log("2 bottles of beer on the wall, 2 bottles of beer. \nTake one down and pass it around, 1 bottle of beer on the wall.");
+    console.log("1 bottle of beer on the wall, 1 bottle of beer. \nTake one down and pass it around, no more bottles of beer on the wall.");
+    console.log("No more bottles of beer on the wall, no more bottles of beer. \nGo to the store and buy some more, 99 bottles of beer on the wall.");
+}
+
+
+bottles();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
