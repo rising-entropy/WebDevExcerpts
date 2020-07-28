@@ -1,0 +1,22 @@
+{
+  "name": "my-express-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "pstree.remy": "^1.1.0"
+  },
+  "keywords": [],
+  "description": ""
+}

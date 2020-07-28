@@ -1,0 +1,2 @@
+If Nodemon doesn't work,
+refer here: https://medium.com/@abdurrakib0/nodemon-isnt-working-solution-afb8cdd1c657
