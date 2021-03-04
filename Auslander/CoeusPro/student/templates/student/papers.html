@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<br>
+<h1>Papers</h1>
+<br>
+<!--Add a Paper-->
+<br>
+<a class="btn btn-light" href="{% url 'student:addPaper' %}" role="button">Add a Paper</a>
+<br><br><br>
+<!--View All Papers-->
+
+<h2>Your Papers: </h2>
+<br>
+<h4>Paper Count: {{ countPapers }}</h4>
+<br><br>
+{% for i in allPapers %}
+<div class="card text-center">
+  <div class="card-header">
+    {{ i.papers.papertitle }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ i.papers.mode }}</h5>
+    <p class="card-text">{{ i.papers.confname }}</p>
+    <h5 class="card-title">{{ i.papers.location }}</h5>
+    <p class="card-text">{{ i.cpapers.level }}</p>
+    <h6 class="card-title">{{ i.papers.publicationPorR }}</h6>
+    <p class="card-text">{{ i.papers.publicationtype }}</p>
+      <h6 class="card-title">Volume {{ i.comps.volumenumber }}</h6>
+    <p class="card-text">Issue {{ i.papers.issuenumber }}</p>
+      <h6 class="card-title">ISBN/ISSN/DOI {{ i.papers.isbnissndoi }}</h6>
+    <p class="card-text">Page {{ i.papers.pagefrom }} - {{ i.papers.pageto }}</p>
+       <h6 class="card-title">{{ i.papers.month }}  {{ i.comps.year }}</h6>
+    <p class="card-text">Url to the published paper: <a href={{ i.papers.paperurl }}>{{ i.papers.paperurl }}</a> </p>
+  </div>
+  <div class="card-footer text-muted">
+    {{ i.papers.startdate }} - {{ i.papers.enddate }}
+  </div>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

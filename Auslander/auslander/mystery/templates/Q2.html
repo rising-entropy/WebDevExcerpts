@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Question 2{% endblock %}
+
+{% block content %}
+<h1>2</h1>
+
+<p>
+
+On the route to Sydenhem hill wood forest <br>
+After identifying the clue, Sherlock and you are on the way to Sydenhem hill wood forest. It was an early autum morning and a frosty chill hung in the air. The leaves from the tall trees lay scattered on the forest  floor. And upon the forest floor so woven with ancient tree roots came a light filtered by the bouquet of foliage above.<br>
+Sherlock and you reached the main Sydenham station. It was a lonely station which never saw a croud. The street was desolate. The traffic light swung in the breeze, telling all the nonexistent drivers to stop. After exiting the station, a mischievous person with two horses was waiting there, he confronts Sherlock that an anonymous person has sent him to bring him to the required  destination. Sherlock  tries to find out some information from the carrier but then he just ignores and just performs his required task.<br>
+After reaching the destination the carrier goes away leaving you and Sherlock alone. It was an isolated area calm and quiet covered with full of canopy trees. And there you  see the same house that you and Sherlock had already seen in the letter given by Ava. And Sherlock starts to inspect the house. He finds the house empty but sees something beneath the cloth.  He opens it and finds  a machine and a chit with “CSCQ”. The machine looked like a tube with small screen with four rotating wheels each consisting of a special character with a button. Sherlock sets the string name on that machine and presses the button. After pressing the button something strange happened. Suddenly  there were vibratiions in the air, which produced that ghostly howling noise  and you both noticed some strange viewing around you as it was some different place.<br>
+Then you reached the station and you found that the station had become more moderened with shape of train was bit different  than it was previously. Now there were high speed trains with rails made of hot rolled steel. Seeing all the things Sherlock decides to go back to his home. On the train journey he finds strange things.  The city was organized. There were theaters, inns and pleasure gardens. Proper sewer network was built. In the midst of confusion Sherlock reaches 221b Baker street and  finds his house deteriorated from outside. He purchases a newspaper, looking on various articles written on it like cricket match against plum warner’s XI, Spanish flu havoc, conscription crises, and while looking on date on newspaper he becomes more perplexed and didn’t believe on what he was seeing. So to verify the same he asks the newspaper seller about today’s date. And the seller  replied him with the same date of what was written on the paper and Sherlock realizes that he had went through time travelling.<br>
+Sherlock enters the house finding nobody lives in there but sees the same box that he had seen with Ava. He opens the box finding a message there-<br>
+“Congrats on reaching up here. Now here the game gets tougher. I am going to murder someone at sharp 12:00 am at a junkyard in Cross-rail place, London. Stop me if you can…. <br>
+                                                                                             -To the most intelligent detective.”<br>
+On reading the message Sherlock gets excited as he can finally unravel the mystery man, the black hooded figure. And he heads towards the given destination. <br>
+
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="answer">
+        <button type="submit" value="sub" name="sub">Submit Answer</button>
+        <br>
+        <br>
+        {% if ans %}
+        <p><strong>Answer<br>{{ ans }}</strong></p>
+        {% endif %}
+        {% if hin %}
+        <p><strong>Hint: <br>{{ hin }}</strong></p>
+        {% endif %}
+        <br>
+        <br>
+        <button type="submit" value="previous" name="previous">Previous</button>
+        <button type="submit" value="hint" name="hint">Show Hint</button>
+        <button type="submit" value="answer" name="answer">Show Answer</button>
+        <br><br>
+    </form>
+    <br><br>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Instructions{% endblock %}
+
+{% block content %}
+<h1>Auslander Instructions</h1>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor ex nec lectus viverra sagittis. Maecenas eget facilisis sem. Integer scelerisque risus a nibh maximus fermentum. Etiam mauris sem, auctor quis elementum eget, posuere et odio. Nulla facilisi. Sed eu fermentum neque. Morbi iaculis leo id nibh varius mollis. In fermentum tincidunt lacus, a ultricies felis auctor et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vehicula finibus ligula, eget placerat mauris auctor vestibulum.<br>
+
+Nam at odio ornare, finibus sapien rutrum, lacinia sapien. In eu finibus nulla. Fusce at libero a orci iaculis tristique condimentum vitae massa. Pellentesque dictum feugiat ante nec accumsan. Cras pellentesque nunc velit, sit amet ultricies turpis facilisis quis. Quisque tempus blandit nibh, in congue nulla maximus vel. Phasellus sollicitudin dignissim purus, id fermentum dolor. Sed vulputate tincidunt nibh eget bibendum.<br>
+
+Aenean ultrices lacinia vehicula. Quisque et ipsum viverra, gravida nibh ut, mattis felis. Suspendisse non condimentum urna. Quisque quis lacinia sem. Etiam quis massa eget nisl malesuada fermentum et non augue. Sed malesuada nisi at erat accumsan mattis. Quisque non nisi gravida felis placerat accumsan vel eu dolor. Proin malesuada tortor at diam molestie, sit amet placerat libero vestibulum.<br>
+
+Donec volutpat eu quam et ornare. Pellentesque in tincidunt sem. Etiam sit amet massa tellus. Proin velit nibh, varius vel viverra id, dapibus non turpis. Sed tempor, justo eget faucibus sagittis, lectus velit imperdiet neque, ac scelerisque purus lacus at quam. Proin sit amet consequat nisl. In ut dolor at metus congue mollis sed nec ligula. Cras consequat fermentum congue. In est mi, malesuada non blandit quis, sollicitudin dictum ligula. Ut purus est, finibus ac ligula in, condimentum tincidunt est. Proin sem elit, tincidunt et aliquet in, dignissim vitae nisl.<br>
+
+Morbi viverra enim justo, eu rutrum risus condimentum ac. Fusce tempus elit sit amet pellentesque semper. In hac habitasse platea dictumst. Donec finibus nunc risus, at finibus ligula aliquam ac. Praesent in libero id eros fringilla tincidunt. Vestibulum auctor felis id orci tristique pharetra. Vestibulum consequat posuere metus, vel consequat odio elementum sit amet. Sed viverra augue lorem, vitae suscipit quam hendrerit ac. Vivamus urna mi, tempus et arcu at, eleifend condimentum risus. Aenean ut purus accumsan dui vestibulum accumsan. Donec eu nisi sem. Sed bibendum semper justo eget sollicitudin. Morbi ultrices lorem ac auctor efficitur. Curabitur vel venenatis neque.<br>
+</p>
+    <form action="/mystery" method="POST">
+        {% csrf_token %}
+        <button type="submit">Let's Begin</button>
+    </form>
+{% endblock %}

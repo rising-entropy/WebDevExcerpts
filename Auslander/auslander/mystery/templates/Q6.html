@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Question 6{% endblock %}
+
+{% block content %}
+<h1>6</h1>
+
+<p>
+The Buckingham Palace, 27 June 1887<br>
+There was a celebration party at Buckingham Palace for celebrating Queen Victoria’s 50 years of glorious reign.  The walls were lined with intricate oil paintings, illustrating the royal procession. The hall itself was magnificent with ornate ceiling and was decorated with huge chandeliers, and multicoloured stained glasses. The Buckingham Palace looked even more grand  and beautiful.<br>
+Sherlock was observing the party and there he finds prince Henry. He says him that he wants to talk something private with him. Henry tells the waiter to bring them drinks in the central room on the first floor and they both go there. <br>
+In the central room Henry finds a ten year old boy, Lucas. Sherlock says him to attend the party. Henry just ignores him and asks Sherlock if he knows anything about the murderer. Sherlock then replies- “Yes, Prince Henry or shall I say Murderer Henry?” Henry being in panic state speaks in harsh tone “What nonsense is this?”<br>
+ In the meantime the waiter arrives there with drinks and he intentionally spills the glass of drink in front of everyone. Sherlock realizes it and says to waiter- “Welcome , black hooded devil or shall I say Austin?”  Austin replies “so you finally know me now” Lucas with astonishment asks Sherlock “Is he my brother Austin?” To which Sherlock replies “Yes, he is your younger brother Austin.”<br>
+Henry was perplexed and was unable to understand what was happening. Then Sherlock hands over the time machine to Lucas to pull out his gun and in mean time Austin pulls out his gun and points towards Henry. And Sherlock points his gun towards Austin. Austin whose throat tightened in unshed tears of sorrow and anger says- “You killed my parents” To which Henry says- “I don’t even know you” Then Austin says-“I am late prince Charles’s close associate Jonas’s son. The fire that you had set in farmhouse had destructed and parted our lives apart.” He continues “I was present there when you had burnt the farmhouse. I somehow managed to save my 5 year old self and kidnapped John. Then I went in future and admitted my 5 year old self to St. Paul orphanage along with a letter of revenge and a diary that contained details of how all murders are going to be executed. And then I went on a murder spree.”<br>
+“I grew up in the orphanage. I worked in T-corp, a company which later invented the time machine and also I was trained by Tanzanian martial arts teacher Hojo, who after hearing my story helped me to be an  assassin and also taught me to speak fluent Swahili language.”<br>
+Then Sherlock asks Henry that why did he kill Charles , to which Henry replies  “My mother wanted England to have a ruler that was being loved by all the citizens, the one who cares first about the country and then about himself. And I was lacking in that qualities but my brother was excellent. So my brother was like a hurdle in my way, so I had to kill him.”<br>
+Sherlock tells Austin to put down his gun or else he will kill Lucas, to which Austin says “I know you are a nice guy Sherlock, you won’t kill any innocent and why would I let my brother and father die” saying this Austin shoots at the time machine present in Lucas’s hand. And suddenly there is some spark in the machine and Lucas disappears. Sherlock stood in complete silence after watching this and asks  Austin “Did you just say you father? And what did you do to Lucas?” Austin wiping out his tears says “Let me explain you Sherlock. Though I have tried several times to change my past and future, the sequence of events will occur in the same way as that was destined. This is a bootstrap paradox that one cannot change the sequence of events occurring in specific time and so I was not able  to save my parents despite knowing that they would get killed. I was not able to find that mole or jinx.”<br>
+Sherlock interrupted Austin “ And what about Lucas? What did you do to him?” Austin smiles and says “He is transported thirty years back, where he is adopted by my grandparents. And they have changed his name to Jonas. So basically, Lucas and my father is the same person, my brother and my father are same. We are a family that is being created by time and if I had not shot the time machine our family would have  disappeared and then we would not have experienced our happy family life even for a short time.”<br>
+Austin continued “I had killed all three of John’s associates in three different time zones so that you would get the time concept clearly and then reach out to me. And if the bodies don’t belong to that time zone no one will be able to identify them and there is no chance of investigation. Time works in a magical way. And let me tell you the future ..” Everyone present in the room gets panic. And looking at his watch Austin says “Henry will die in 5 seconds and..” Hearing this Henry tries to run away, Austin shoots Henry in head and Sherock shoots Austin. Henry falls right dead. And Austin falls down and says “..and me too!” saying this Austin dies.    <br>
+28 June 1887<br>
+	Sherlock and you are sitting on the sofa reading newspaper stating the demise of Henry and Charles which had left no option for Queen Victoria to hold power again till she finds an appropriate ruler for London.<br>
+	Sherlock asks you  if you are able to find a jinx in this entire sequence of events that would have prevented this time loop or bootstrap paradox, to which you reply “Yes, …<br>
+
+<br><br>
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <textarea id="conclusion" name="conclusion" rows="100" cols="300">
+        <button type="submit" value="sub" name="sub">Submit Answer</button>
+        <br>
+        <button type="submit" value="previous" name="previous">Previous</button>
+    </form>
+    <br><br>
+{% endblock %}

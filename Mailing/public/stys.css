@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+div{
+    margin: 0;
+    padding-top: 20%;
+    padding-bottom: 35%;
+    background-color: #26154d;
+}
+h1{
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    color: #8ba8ff;
+}
+h2{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #cfd8e6;
+}

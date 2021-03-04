@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Question 4{% endblock %}
+
+{% block content %}
+<h1>4</h1>
+
+<p>
+Big Ben,London,Night of June 24,1859
+    • Sherlock and you comes at the entrance of big ben(Night time….describe the silence of night and complete darkness)
+    • Sherlock and you climbs all way up through stairs to 114 steps in tower where a small room(prison room….which was in construction phase)
+    • While climbing up there were flambeau (Hindi me mashal (मषाल) ) at regular intervals.
+    • Sherlock enters the room finding a strong fight that was going on between the black-hooded figure and a Victorian dressed man…before Sherlock reacts to something the black-hooded fig pushed the Victorian dressed man towards the side of wall having flambeau on it.
+    • Flambeau falls on the ground and gets extinguished(complete darkness)
+    • When flambeau felled on ground ,the black hooded figure pushed Sherlock and ran downwards with most of his capacity……the Victorian men shouted to catch the black hooded guy
+    • Sherlock not being able to look properly at the Victorian guy’s face….believed that he was David and chases the black hooded guy
+    • Sherlock and you are chasing the black hooded guy on the Westminster bridge….fearing that he may elope away….Sherlock and you pull out guns and trying to aim at his leg…..Sherlock fires but misses and you accidentally shots at his back……the black hooded figure falls somewhere in between of the bridge
+    • Sherlock and you approaches towards the guy
+    • As the seriously wounded man is lying on the road, Sherlock turns his body to sees his face…..removes the mask and gets surprised
+    • The man was none other than David ….who now sees that the man who was chasing him was Sherlock and is now trying to speak something to him
+    • He says with distorted voice –“the other man had kidnapped him the day after tomorrow we met you and made him unconscious ….I don’t know how he took me here …..please save Prince Henry!!…God Bless Queen Victoria”….speaking this much the man died
+    • Now all three associates of prince Henry are dead
+    • Sherlock hears the boot sound of a man from nearby….he turns around to see the Victorian guy standing at the end of the bridge
+    • Sherlock realises how cleverly the black hooded figure had played him….he first had exchanged his clothes with David and then made me to kill the wrong guy
+    • Sherlock can hear the wicked smile of black hooded figure dressed in victorian cloth.
+    • The man takes out the machine out of his coat along with a letter and drops it there
+    • Sherlock sets his gun to fire towards him ,but the other man disappears within that time
+    • Sherlock and you comes at the other end of the bridge to see the stuff that was dropped by the man
+    • Sherlock sees the same time machine except he sees four extra ring for setting the day and month
+    • The letter once again had something written on it-“Finally we had entered the endgame…Just one murder remains and you get all your answer..here’s your last clue-“
+Queen Victoria and the country celebrate a Golden Jubilee, the 50th year of her reign after a win in battle of Kennesaw mountain”…Let’s meet for last time soon.
+<br><br>
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="answer">
+        <button type="submit" value="sub" name="sub">Submit Answer</button>
+        <br>
+        <br>
+        <br>
+        {% if ans %}
+        <p><strong>Answer<br>{{ ans }}</strong></p>
+        {% endif %}
+        {% if hin %}
+        <p><strong>Hint: <br>{{ hin }}</strong></p>
+        {% endif %}
+        <br>
+        <br>
+        <button type="submit" value="previous" name="previous">Previous</button>
+        <button type="submit" value="hint" name="hint">Show Hint</button>
+        <button type="submit" value="answer" name="answer">Show Answer</button>
+    </form>
+    <br><br>
+{% endblock %}

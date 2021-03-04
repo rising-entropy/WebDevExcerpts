@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<br>
+<h1>Competitions</h1>
+<br>
+<!--Add a Competition-->
+<br>
+<a class="btn btn-light" href="{% url 'student:addCompetition' %}" role="button">Add a Competition</a>
+<br><br><br>
+<!--View All Competitions-->
+
+<h2>Your Competitions: </h2>
+<br>
+<h4>Competition Count: {{ countCompetitions }}</h4>
+<br><br>
+{% for i in allCompetitions %}
+<div class="card text-center">
+  <div class="card-header">
+    {{ i.comps.organizer }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ i.comps.compname }}</h5>
+    <p class="card-text">{{ i.comps.location }}</p>
+    <h5 class="card-title">{{ i.comps.winner }}</h5>
+    <p class="card-text">{{ i.comps.mode }}</p>
+    <h6 class="card-title">{{ i.comps.projectTitle }}</h6>
+    <p class="card-text">{{ i.comps.description }}</p>
+    {% if i.comps.certBool == True %}
+    <a href="{{i.comps.certification}}" class="btn btn-primary">Download Certificate</a>
+    {% endif %}
+  </div>
+  <div class="card-footer text-muted">
+    {{ i.comps.startdate }} - {{ i.comps.enddate }}
+  </div>
+</div>
+<br>
+{% endfor %}
+
+
+
+
+{% endblock %}

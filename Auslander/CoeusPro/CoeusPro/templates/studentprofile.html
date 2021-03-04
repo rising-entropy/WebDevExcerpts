@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Student Profile</h1>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="id_username">
+            Firstname:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ user.first_name }}</span>
+        </div>
+        <label class="control-label col-sm-2" for="id_username">
+            Lastname:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ user.last_name }}</span>
+        </div>
+        <label class="control-label col-sm-2" for="id_username">
+            Email:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ user.email }}</span>
+        </div>
+        <label class="control-label col-sm-2" for="id_username">
+            PRN:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ student.PRN }}</span>
+        </div>
+        <label class="control-label col-sm-2" for="id_username">
+            Year Of Enrollment:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ student.year }}</span>
+        </div>
+        <label class="control-label col-sm-2" for="id_username">
+            Department:
+        </label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ student.dept }}</span>
+        </div>
+    </div>
+{% endblock %}

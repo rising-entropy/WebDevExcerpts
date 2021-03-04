@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Completion{% endblock %}
+
+{% block content %}
+<h1>Congrats on Completion</h1>
+
+<p>
+Congrats on Completing the Auslander Hunt.<br>
+You may close the tab and Complete the Hunt or go back and edit Q6.<br>
+<br><br>
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit" value="previous" name="previous">Previous</button>
+    </form>
+    <br><br>
+{% endblock %}

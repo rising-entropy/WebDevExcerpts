@@ -1,0 +1,68 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <img style="display: inline;" src="http://www.walchandsangli.ac.in/images/Walchand_11.gif" alt="logo" />
+    <h1 style="display: inline;">Walchand College of Engineering, Sangli</h1>
+    <br>
+    {% if user.is_authenticated %}
+    <h3>Hi {{ user.username }}</h3>
+    <br>
+    <div class="row">
+        <div class="column">
+            <div class="card" style="width: 30rem; height: 300px">
+
+              <div class="card-body">
+                <h5 class="card-title">Your Course Details</h5>
+                <p class="card-text">Here you can add your courses and view your previously added courses.</p>
+                <a class="btn btn-primary stretched-link" href="{% url 'student:courses' %}">Courses</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="width: 30rem; height: 300px">
+
+              <div class="card-body">
+                <h5 class="card-title">Your Webinar Details</h5>
+                <p class="card-text">Here you can add your webinars and view your previously added webinars.</p>
+                <a class="btn btn-primary stretched-link" href="{% url 'student:webinars' %}">Webinars</a>
+              </div>
+           </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="width: 30rem; height: 300px">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Your Workshop Details</h5>
+                    <p class="card-text">Here you can add your workshops and view your previously added workshops.</p>
+                    <a class="btn btn-primary stretched-link" href="{% url 'student:workshops' %}">Workshops</a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="width: 30rem; height: 300px">
+
+              <div class="card-body">
+                <h5 class="card-title">Your Competition Details</h5>
+                <p class="card-text">Here you can add your workshops and view your previously added workshops.</p>
+                <a class="btn btn-primary stretched-link" href="{% url 'student:competitions' %}">Competitions</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="width: 30rem; height: 300px">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Your Paper Details</h5>
+                    <p class="card-text">Here you can add your papers and view your previously added papers.</p>
+                    <a class="btn btn-primary stretched-link" href="{% url 'student:papers' %}">Papers</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+{% endblock %}

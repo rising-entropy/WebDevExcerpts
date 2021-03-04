@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Question 3{% endblock %}
+
+{% block content %}
+<h1>3</h1>
+
+<p>
+Near Junkyard, in cross wood rail, London 1918,<br>
+	Sherlock and you enter the Junkyard. There was lot of waste materials like scrap metals, smashed bodies of old cars were thrown surrounded by fence. They see a small warehouse in corner. They enter the warehouse finding out nobody there, but a big cross hanging on the wall having a burnt dead body hanging over it. The body was burnt but there were only some scratches on the face and not burnt properly, so it was identifiable. <br>
+	Sherlock goes closer to see the face of burnt body and he surprised. He realises that the dead body was of John, Henry’s close associate, whose photo he had seen earlier in Buckingham Palace. Sherlock gets confused with lots of questions arising in his mind.<br>
+    1. How John was present in 1918?<br>
+    2. How John is related to Lucas’s Parent’s kidnapping mystery?<br>
+    3. Why did the black hooded figure kill Henry’s close associate?<br>
+    4. What relation does black hooded figure yield with both of them?<br>
+Sherlock finds the crumbs of leaves lying beneath the cross. On close observation he finds out that the crumb was of Oak leaves which he had seen earlier near Charles body. Sherlock makes a guess that the black hooded figure might have hit him on his head while he was in Aylesbury Farm House. So he might had become unconscious and the brought him to 1918 and burned him alive. All that on the same day of Prince Charles death and Jonas being missing.<br>
+Seeing to the right side, there was a message written over the wall – “Hssh…Too late for this one…..being the most intelligent detective I had expected better from you….Isn’t your game on yet?......Right after 2 hours….the next murder will tick your door….if you have courage, the try and save next man….code is “CSEO”.”<br>
+Sherlock and you instantly put the message in time machine and gets teleported to same place in 1927 as he was able to decipher the mechanism of code – “0-A 1-C 2-E 3-G……” The message on the same wall had changed and it was- “You have got insufficient time Sherlock…..try and stop murder at Gun-fleet sands….tick tock tick tock” Sherlock reads and leave in hurry.<br>
+<br>
+
+Gun-fleet sands, Offshore of Thames River, London 1927<br>
+	Sherlock sees the black hooded figure watching the man get burnt at offshore and run towards him to catch him. The black hooded man watches Sherlock approaching him so uses the time machine and vanishes in an instant. Sherlock curses his misfortune but then he take a closer look towards the body lying offshore and finds that he was none other than Albert, Prince Henry’s close associate. <br>
+	Sherlock still unable to understand why the black hooded figure is murdering Henry’s associates???? He searches nearby and then finds a boat that has something written on it- “he is tall, he is accurate, e shows the same thing from any direction, he feels the wind on his face, and has his hands over his face…….You are trapped in my world Sherlock….just two more times and everything will be over forever……try and stop me killing David in 1859<br>
+-From<br>
+  The most amazing person on this planet” <br>
+Being angry on himself, Sherlock leaves the place in utter disappointment for the next location.<br><br>
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="answer">
+        <button type="submit" value="sub" name="sub">Submit Answer</button>
+        <br>
+        <br>
+        {% if ans %}
+        <p><strong>Answer<br>{{ ans }}</strong></p>
+        {% endif %}
+        {% if hin %}
+        <p><strong>Hint: <br>{{ hin }}</strong></p>
+        {% endif %}
+        <br>
+        <br>
+        <button type="submit" value="previous" name="previous">Previous</button>
+        <button type="submit" value="hint" name="hint">Show Hint</button>
+        <button type="submit" value="answer" name="answer">Show Answer</button>
+    </form>
+    <br><br>
+{% endblock %}

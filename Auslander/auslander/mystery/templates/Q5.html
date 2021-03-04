@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - Question 5{% endblock %}
+
+{% block content %}
+<h1>5</h1>
+
+<p>
+25 June 1887,<br>
+The Buckingham Palace,<br>
+	The palace was decorated like a new bride to admire his queen. You realized that there were still 2 days for the celebration. So, you asked Sherlock that we have come to proper location but the time set by you is wrong. Sherlock gives a faint smile to you and then moves towards the main door of the palace. <br>
+	Sherlock and you visit Prince Henry who was ready to be crowned as king on June 28. Prince Henry was in his own worry regarding the disappearance of all his close associates within the span of 4 days from incident. Sherlock hides the fact of their murder from Prince as he won’t believe the time story and also having insufficient time for explanation. Prince Henry invites Sherlock for ceremony in the palace on 27 June where Queen Victoria’s 50 years of reign will be celebrated. Then he exits place.<br>
+	Sherlock thinks of how the black hooded figure persuaded him to complete all his challenges in order to find Lucas’s parents. He was really thinking of connection between henry’s associate and Lucas’s parents. Something clicked Sherlock.<br>
+	Sherlock went to Lucas’s house and started searching where he found their family photo and an invitation letter to Aylesbury Farmhouse for party that was hosted five days ago. Sherlock asks Lucas about his father’s occupation who tells Sherlock that his father was close associative of Prince Charles. Sherlock now figured something. Sherlock decides to go back at the farmhouse party and look what exactly happened there. He uses the time machine then sets date of 20 June, 1887 and go there.<br>
+
+<br>
+20 June, 1887<br>
+Aylsebury Farmhouse,<br>
+	Sherlock and you hide behind the bench in Royal Garden to keep track of what had occurred. Sherlock sees Lucas’s parents - Jonas and Martha along with Austin coming there and entering the farmhouse.<br>
+	Party was almost over and very few people were remaining. After waiting for hours Sherlock could see Prince Henry and his associates coming out of farmhouse and as soon as they came out fire eloped at that palace. All four of them were looking at that palace and was laughing and celebrating. Sherlock realized that it was Henry who had planned his brother’s murder when very few days are remaining for king’s announcement. The whole farmhouse is in flames and lots of smoke is rising. Assuming that all people inside it are now dead, Henry orders his cart-man George to take him along with his associates to Arthur to attend the meeting with Lord of Sussex regarding the marriage proposal of Princess Margery. John decides to stay at that place to keep watch so everything goes as per plan. Henry allows to do so and leave.<br>
+	Suddenly Sherlock sees another cart was coming and stops near John. John going near him to check who he was as he was not George. The cart-man pulls out heavy rod and hit John on his forehead. John become unconscious so, he lifts his body and throw it in the cart. Sherlock from his way of clothing, knew that it was none other than black hooded figure who then runs toward the right door of farmhouse where door was mainly made of glass.<br>
+	He threw few gardening pots and break the door and went inside. After few minutes, Sherlock could see the black hooded figure carrying an unconscious Austin. He was not dead but some fire was still burning around his collar area. Latter that extinguished by black devil but the area around neck was burnt. Reaching the cart he drops Austin there with John. He opens his time machine and the cart disappears.<br>
+	Sherlock and you come out of hiding and rushes towards the right entrance where you find everybody was lying dead and burnt. Sherlock takes a closer look towards the Jonas, Martha and Prince Charles lying burnt. You looks at Sherlock who speaks something- “Finally, I know who my black hooded devil is!” A gentle smile comes at Sherlock’s face who now opens his time machine enters 27 June 1887 which is the day of final murder.<br>
+<br><br>
+</p>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="answer">
+        <button type="submit" value="sub" name="sub">Submit Answer</button>
+        <br>
+        <br>
+        <br>
+        {% if ans %}
+        <p><strong>Answer<br>{{ ans }}</strong></p>
+        {% endif %}
+        {% if hin %}
+        <p><strong>Hint: <br>{{ hin }}</strong></p>
+        {% endif %}
+        <br>
+        <br>
+        <button type="submit" value="previous" name="previous">Previous</button>
+        <button type="submit" value="hint" name="hint">Show Hint</button>
+        <button type="submit" value="answer" name="answer">Show Answer</button>
+    </form>
+    <br><br>
+{% endblock %}

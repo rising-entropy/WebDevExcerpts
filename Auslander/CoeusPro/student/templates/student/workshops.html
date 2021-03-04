@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Workshops{% endblock %}
+
+{% block content %}
+<br><h1>Workshops</h1><br>
+<!--Add a Workshop-->
+<a class="btn btn-light" href="{% url 'student:addWorkshop' %}" role="button">Add a Workshop</a><br>
+<!--View All Workshops-->
+<br>
+<h2>Your Workshops: </h2>
+<br>
+<h4>Workshop Count: {{ countWorkshops }}</h4>
+<br><br>
+{% for i in allWorkshops %}
+<div class="card text-center">
+  <div class="card-header">
+    <h4>{{ i.name }}</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ i.organizer }}</h5>
+    <p class="card-text">{{ i.location }}</p>
+    <p class="card-text">
+    {% if i.mode == True %}
+    Online
+    {% endif %}
+    {% if i.mode == False %}
+    Offline
+    {% endif %}
+    </p>
+    {% if i.certification != "NA" %}
+    <a href="{{i.certification}}" class="btn btn-primary">Download Certificate</a>
+    {% endif %}
+  </div>
+  <div class="card-footer text-muted">
+    {{ i.startdate }} - {{ i.enddate }}
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}

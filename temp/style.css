@@ -1,0 +1,16 @@
+body{
+    background-color: #e8e8e8;
+}
+
+.name{
+    color: #f05454;
+    font-family: 'Goldman', cursive;
+    text-align: center;
+    font-size: 4rem;
+}
+.poem{
+    text-align: center;
+    font-family: 'Goldman', cursive;
+    color: #30475e;
+    font-size: 2rem;
+}

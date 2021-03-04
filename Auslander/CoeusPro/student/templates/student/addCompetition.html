@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}Add a Competition{% endblock %}
+{% load static %}
+{% block content %}
+<h1>Add a Competition</h1>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="compname">
+            Name of Competition:
+        </label>
+        <div class="col-sm-10">
+            <input id="compname" maxlength="30" name="compname" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="organizer">
+            Organized by:
+        </label>
+        <div class="col-sm-10">
+            <input id="organizer" maxlength="30" name="organizer" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="location">
+            Location:
+        </label>
+        <div class="col-sm-10">
+            <input id="location" maxlength="20" name="location" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="mode">
+            Mode:
+        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mode" id="mode1" value="Online" checked>
+            <label class="form-check-label" for="exampleRadios1">Online</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mode" id="mode2" value="Offline">
+            <label class="form-check-label" for="exampleRadios2">Offline</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="projectTitle">
+            Project/Event Title:
+        </label>
+        <div class="col-sm-10">
+            <input id="projectTitle" maxlength="30" name="projectTitle" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="description">
+            Project/Event Description:
+        </label>
+        <div class="col-sm-10">
+            <textarea id="description" name="description" class="form-control" required>
+            </textarea>
+         </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Team">
+            Other Mates:
+        </label>
+    </div><br>
+    <button type="button" class="btn btn-info" id="add">Add Mates</button><br><br>
+    <p id="comps"></p>
+
+    <br>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <input id="allMates" maxlength="30000" type="hidden" class="form-control" name="allMates">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="startdate">
+            Start Date:
+        </label>
+        <input id="startdate" name="startdate" type="date" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="enddate">
+            End Date:
+        </label>
+        <input id="enddate" name="enddate" type="date" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="winner">
+            Winner or Participant:
+        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="winner" id="winner" value="Winner" checked>
+            <label class="form-check-label" for="exampleRadios1">Winner</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="winner" id="participant" value="Participant">
+            <label class="form-check-label" for="exampleRadios2">Participant</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="certification">
+            Upload Certificate:
+        </label>
+        <div class="col-sm-10">
+            <input id="certification" name="certification" type="file" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" id="sub">Add Competition</button>
+        </div>
+    </div>
+</form>
+<script src="{% static '/js/comp.js' %}"></script>
+{% endblock %}

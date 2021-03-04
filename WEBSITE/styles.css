@@ -1,0 +1,28 @@
+
+#demo-svg path{
+    stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: dash 30s linear forwards;
+}
+
+.name{
+  margin-top: 3%;
+}
+
+
+
+body{
+  background-color: #2e2e2e;
+}
+
+
+@media screen and (min-width: 420px) {
+  .name{
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+  }
+  
+
+}

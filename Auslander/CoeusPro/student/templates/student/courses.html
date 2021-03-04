@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<br>
+<h1>Courses</h1>
+<br>
+<!--Add a Course-->
+<br>
+<a class="btn btn-light" href="{% url 'student:addCourse' %}" role="button">Add a Course</a>
+<br><br><br>
+<!--View All Courses-->
+<h2>Your Courses: </h2>
+<br>
+<h4>Course Count: {{ countCourses }}</h4>
+<br><br>
+{% for i in allCourses %}
+<div class="card text-center">
+  <div class="card-header">
+    {{ i.domain }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ i.name }}</h5>
+    <p class="card-text">{{ i.platform }}</p>
+    {% if i.certification != "NA" %}
+    <a href="{{i.certification}}" class="btn btn-primary">Download Certificate</a>
+    {% endif %}
+  </div>
+  <div class="card-footer text-muted">
+    {{ i.startDate }} - {{ i.endDate }}
+  </div>
+</div>
+<br>
+{% endfor %}
+
+
+
+{% endblock %}

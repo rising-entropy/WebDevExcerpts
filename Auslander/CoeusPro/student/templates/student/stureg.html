@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<h1>Student Registration Form</h1>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form class="form-horizontal" role="form" action="/student" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="first_name">
+            First Name:
+        </label>
+        <div class="col-sm-10">
+            <input id="first_name" maxlength="30" name="first_name" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="last_name">
+            Last Name:
+        </label>
+        <div class="col-sm-10">
+            <input id="last_name" maxlength="30" name="last_name" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="PRN">
+            PRN:
+        </label>
+        <div class="col-sm-10">
+            <input id="PRN" maxlength="20" name="PRN" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="year">
+            Year:
+        </label>
+        <select name="year" id="year" class="form-control col-sm-10" required>
+            <option value="">--Please Select Academic Year:--</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="dept">
+            Department:
+        </label>
+        <select name="dept" id="dept" class="form-control col-sm-10" required>
+            <option value="">--Please Select Your Department:--</option>
+            <option value="CSE">Computer Science and Engineering.</option>
+            <option value="IT">Information Technology.</option>
+            <option value="ELE">Electronics.</option>
+            <option value="EE">Electrical.</option>
+            <option value="ME">Mechanical.</option>
+            <option value="CV">Civil.</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email">
+            Email ID:
+        </label>
+        <div class="col-sm-10">
+            <input id="email" maxlength="50" name="email" type="email" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="username">
+            Username:
+        </label>
+        <div class="col-sm-10">
+            <input id="username" maxlength="30" name="username" type="text" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="id_password">
+            Password:
+        </label>
+        <div class="col-sm-10">
+            <input id="id_password" maxlength="30" name="password" type="password" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="conf_password">
+            Confirm Password:
+        </label>
+        <div class="col-sm-10">
+            <input id="conf_password" maxlength="30" name="conf_password" type="password" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Register</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

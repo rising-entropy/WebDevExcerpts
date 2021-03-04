@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Auslander - The Timeless Murder Mystery{% endblock %}
+
+{% block content %}
+<h1>Auslander Login</h1>
+{% if errorMessage %}
+<p><strong>{{ errorMessage }}</strong></p>
+{% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="email" name="username" id="username">
+        <input type="password" name="password" id="password">
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}

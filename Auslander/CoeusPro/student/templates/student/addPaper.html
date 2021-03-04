@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block title %}Add a Paper{% endblock %}
+{% load static %}
+{% block content %}
+<h1>Add a Paper</h1>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="papertitle">
+            Paper Title:
+        </label>
+        <div class="col-sm-10">
+            <input id="papertitle" maxlength="100" name="papertitle" type="text" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="mode">
+            Mode:
+        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mode" id="mode1" value="Online" checked>
+            <label class="form-check-label" for="exampleRadios1">Online</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mode" id="mode2" value="In-place">
+            <label class="form-check-label" for="exampleRadios2">In-place</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="confname">
+            Name of the Conference, Journal, Proceeding or Book:
+        </label>
+        <div class="col-sm-10">
+            <input id="confname" maxlength="100" name="confname" type="text" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="startdate">
+            Start Date:
+        </label>
+        <input id="startdate" name="startdate" type="date" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="enddate">
+            End Date:
+        </label>
+        <input id="enddate" name="enddate" type="date" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="location">
+            Location:
+        </label>
+        <div class="col-sm-10">
+            <input id="location" maxlength="80" name="location" type="text" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="level">
+            Level:
+        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="level" id="mode1" value="International" checked>
+            <label class="form-check-label" for="exampleRadios1">International</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="level" id="mode2" value="National">
+            <label class="form-check-label" for="exampleRadios2">National</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="publicationPorR">
+            Peered-reviewed or Referred:
+        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="publicationPorR" id="mode1" value="Peered-reviewed" checked>
+            <label class="form-check-label" for="exampleRadios1">Peered-reviewed</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="publicationPorR" id="mode2" value="Referred">
+            <label class="form-check-label" for="exampleRadios2">Referred</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="publicationtype">
+            Publication Type:
+        </label>
+        <div class="col-sm-10">
+            <input id="publicationtype" maxlength="80" name="publicationtype" type="text" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="volumenumber">
+            Volume Number:
+        </label>
+        <div class="col-sm-10">
+            <input id="volumenumber" maxlength="30" name="volumenumber" type="number" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="issuenumber">
+            Issue Number:
+        </label>
+        <div class="col-sm-10">
+            <input id="issuenumber" maxlength="30" name="issuenumber" type="number" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="isbnissndoi">
+            ISBN, ISSN or DOI Number:
+        </label>
+        <div class="col-sm-10">
+            <input id="isbnissndoi" maxlength="20" name="isbnissndoi" type="text" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="pagefrom">
+            Page Number From:
+        </label>
+        <div class="col-sm-10">
+            <input id="pagefrom" maxlength="30" name="pagefrom" type="number" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="pageto">
+            Page Number To:
+        </label>
+        <div class="col-sm-10">
+            <input id="pageto" maxlength="30" name="pageto" type="number" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="month">
+            Month:
+        </label>
+        <select placeholder="MM" name="month" id="month">
+          <option name="" value="" style="display:none;">MM</option>
+          <option name="January" value="January">January</option>
+          <option name="February" value="February">February</option>
+          <option name="March" value="Mar">March</option>
+          <option name="April" value="Apr">April</option>
+            <option name="May" value="May">May</option>
+          <option name="June" value="Jun">June</option>
+          <option name="July" value="Jul">July</option>
+          <option name="August" value="Aug">August</option>
+            <option name="September" value="Sep">September</option>
+          <option name="October" value="Oct">October</option>
+          <option name="November" value="Nov">November</option>
+          <option name="December" value="Dec">December</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="year">
+            Year:
+        </label>
+        <select placeholder="YYYY" name="year" id="ddlYears"></select>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Team">
+            Other Authors:
+        </label>
+    </div><br>
+    <button type="button" class="btn btn-info" id="add">Add Authors</button><br><br>
+    <p id="comps"></p>
+
+    <br>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <input id="allMates" maxlength="30000" type="hidden" class="form-control" name="allMates">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="paperurl">
+            Link to the Published Paper:
+        </label>
+        <div class="col-sm-10">
+            <input id="paperurl" maxlength="100" name="paperurl" type="url" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" id="sub">Add Paper</button>
+        </div>
+    </div>
+</form>
+<script src="{% static '/js/paper.js' %}"></script>
+<script src="{% static '/js/comp.js' %}"></script>
+{% endblock %}
